@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Information</title>
+</head>
+<body>
+<?php
+	$nameErr = $paswErr = "";
+	$name = $pasw = "";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$name = test_input($_POST["name"]);
+		$pasw = test_input($_POST["password"]);
+	}
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+		if (empty($_POST["name"])) {
+			$nameErr = "*Name is required!";
+		} else {
+			$name = test_input($_POST["name"]);
+		}
+
+		if (empty($_POST["password"])) {
+			$paswErr = "*Password is required!";
+		} else {
+			$pasw = test_input($_POST["password"]);
+		}
+	}
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
+
+	?>
+	<form method="POST" action="<?php echo htmlspecialchars ($_SERVER["PHP_SELF"]); ?> ">
+		<label for="name">Username:</label>		<br>
+		<input type="text" id="name" name="name">
+		<span class="error" style="color: red"><?php echo $nameErr; ?> </span><br>
+		<label for="password">Password:</label>	<br>
+		<input type="password" id="password" name="password">
+		<span class="error" style="color: red;"><?php echo $paswErr; ?> </span><br><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<?php
+	if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($nameErr) && empty($paswErr)) {
+		echo "Hello, " . $name . "<br>";
+		echo "Your password is " . $pasw . "<br>";
+	}
+
+	?>
+
+</body>
+</html>
