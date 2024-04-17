@@ -40,7 +40,5 @@ echo "cox teesuf kesildiniz";
 }
 ?> 
 
-
-
 </body>
 </html>
