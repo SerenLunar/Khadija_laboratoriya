@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                let x=document.forms ["myForm"]["fname"].value;
+                let y=document.forms ["myForm"]["lname"].value;
+                let z=document.forms ["myForm"]["email"].value;
+
+
+                if(x=="" ){
+                    document.getElementById("fname-error-message").innerHTML="Please enter a value!"
+                return false;
+                }
+                
+                
+                if(y=="" ){
+                    document.getElementById("lname-error-message").innerHTML="Please enter a value!"
+                return false;
+                }
+                
+                if(z=="" ){
+                    document.getElementById("mail-error-message").innerHTML="Please enter a value!"
+                return false;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Contact Details</h1>
+        <form name="myForm" onsubmit="return validateForm()">
+            <fieldset>
+                <p>Please enter your personal details:</p>
+                <label for="fname">First name:</label>
+                <span id="fname-error-message" style="color: red">*</span><br>
+                <input type="text" id="fname" name="fname"><br><br>
+
+                <label for="lname">Last name:</label>
+                <span id="lname-error-message" style="color: red">*</span><br>
+                <input type="text" id="lname" name="lname"><br><br>
+
+                <label for="address">Street address:</label><br>
+                <input type="text" id="address"><br><br>
+
+                <label for="city">Town/city:</label><br>
+                <input type="text" id="city"><br><br>
+
+                <label for="zip">Postcode/zip:</label><br>
+                <input type="text" id="zip"><br><br>
+
+                <label for="phone">Telephone:</label><br>
+                <input type="text" id="phone"><br><br>
+
+                <label for="mob">Mobile:</label><br>
+                <input type="text" id="mob"><br><br>
+
+                <label for="email">Email address:</label>
+                <span id="mail-error-message" style="color: red">*</span><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <p>Fields marked * are required</p>
+                
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

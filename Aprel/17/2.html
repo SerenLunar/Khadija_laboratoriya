@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>My Feedback Form</h1>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <p>Please check all the emotions that apply to you:</p>
+        <input type="checkbox" id="angry" name="emotion" value="angry">
+        <label for="angry">Angry</label><br>
+
+        <input type="checkbox" id="sad" name="emotion" value="sad">
+        <label for="sad">Sad</label><br>
+
+        <input type="checkbox" id="happy" name="emotion" value="happy">
+        <label for="happy">Happy</label><br>
+
+        <input type="checkbox" id="ambivalent" name="emotion" value="ambivalent">
+        <label for="ambivalent">Ambivalent</label><br><br>
+
+        <p>How satisfied were you with our service?</p>
+        <input type="radio" id="very-satisfied" name="satisfaction" value="very-satisfied">
+        <label for="very-satisfied">Very Satisfied</label><br>
+
+        <input type="radio" id="satisfied" name="satisfaction" value="satisfied">
+        <label for="satisfied">Satisfied</label><br>
+
+        <input type="radio" id="didnt-care" name="satisfaction" value="didnt-care">
+        <label for="didnt-care">Didn't Care</label><br>
+
+        <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label><br>
+
+        <input type="radio" id="very-dissatisfied" name="satisfaction" value="very-dissatisfied">
+        <label for="very-dissatisfied">Very Dissatisfied</label><br><br>
+
+        <label for="comments">Further Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <label for="bio-photo">Bio Photo:</label><br>
+        <input type="file" id="bio-photo" name="bio-photo"><br><br>
+
+        <label for="location">Location Visited:</label><br>
+        <select id="location" name="location">
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Italy">Italy</option>
+            <option value="Spain">Spain</option>
+            <option value="Japan">Japan</option>
+            <option value="French">French</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
